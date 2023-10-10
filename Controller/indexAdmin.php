@@ -27,6 +27,8 @@ ob_start(); // Permet d'enregistré les données dans une mémoire tampon / Stor
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
         <!--Lien icon fontawesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Bibliothèque Jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <title>Accueil</title>
     </head>
@@ -73,8 +75,8 @@ ob_start(); // Permet d'enregistré les données dans une mémoire tampon / Stor
                         case 'create':
                             require_once('../Model/create.php');
                             break;    
-                        case 'update':
-                            require_once('../Model/update.php');
+                        case 'update2':
+                            require_once('../Model/update2.php');
                             break;
                         case 'delete':
                             require_once('../Model/delete.php');

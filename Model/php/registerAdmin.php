@@ -1,4 +1,11 @@
 <?php
+// verifie si une session est bien ouverte
+if (!isset($_SESSION['name'])) {
+    // Rediriger vers la page de connexion ou autre page appropriée si c'est pas le cas
+    header('Location: ?routing=login');
+    exit();
+}
+
 include_once('navAdmin.php');
 
 // Fait la connexion a la page de connexion, necessaire pour la suite
@@ -40,6 +47,11 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['password
             "admin" => $admin
         ]);
 
+        $sqlDate = " ALTER TABLE cyberharcelement.`user`
+             ADD DateAjout TIMESTAMP";
+        $queryD = $db->prepare($sqlDate);
+        $queryD->execute();
+            
         if ($user === true) {
             $cookie_name = 'registered';
             $cookie_value = $userN;
@@ -129,7 +141,7 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['password
                                 Oui
                             </label>
                             <label class="checkbox">
-                                <input type="checkbox" name="admin" value="0    ">
+                                <input type="checkbox" name="admin" value="0">
                                 Non
                             </label>
                         </div>

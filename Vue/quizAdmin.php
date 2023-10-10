@@ -16,10 +16,10 @@
     <div class="hero-body">
         <div class="columns-container is-centered">
             <?php
-            require_once('model/quiz.php');
-            require_once('model/question.php');
-            require_once('model/answer.php');
-            require_once('data/recupQ.php');
+            // require_once('model/quiz.php');
+            // require_once('model/question.php');
+            // require_once('model/answer.php');
+            // require_once('data/recupQ.php');
 
 
 
